@@ -1,0 +1,148 @@
+Ex1:
+import java.io.*;
+import java.util.*;
+public class Ex1
+{
+	public static void main(String[] args)
+        {
+	    Scanner in=new Scanner(System.in);
+	    int n=in.nextInt();
+	    int month=n/30;
+	    int day=n%30;
+		System.out.println("Month:"+month+" "+"Days:"+day);
+	}
+}
+
+
+Ex2:
+
+import java.util.Scanner;
+public class Ex2 {
+    public static void main(String[] args) {
+       int a,b;
+       Scanner obj=new Scanner(System.in);
+       System.out.println("enter 1st number");
+       a=obj.nextInt();
+       System.out.println("enter 2nd number");
+       b=obj.nextInt();
+       if(a>b)
+           System.out.println(b+" is the minimum number");
+       else
+           System.out.println(a+" is the minimum number");
+       
+    }
+    
+}
+
+
+Ex3:
+import java.util.Scanner;	
+
+public class Ex3 {
+
+	public static void main(String args[]) {
+	  Scanner in = new Scanner(System.in); 
+	  System.out.println("Digits Sum and Product");
+	  System.out.println("-----------------------");
+	  System.out.print("Enter Number: ");
+	  int number = in.nextInt();
+	  int remainder, temp, sum=0, product=1;
+	  temp = number;
+	  while (temp!=0){
+		  remainder = temp % 10;
+		  sum = sum + remainder;
+		  product = product * remainder;
+		  temp = temp / 10;
+	  }
+	  System.out.println("Sum of digits of Number '"+number+"'': "+sum);
+	  System.out.println("Product of digits of Number '"+number+"'': "+product);
+	}
+ } 
+
+
+Ex4:
+import java.io.*;
+public class Ex4 {
+   
+    public static void printStars(int n)
+    {
+        int i, j;
+ 
+        for(i=0; i<n; i++)
+        {
+ 
+            for(j=2*(n-i); j>=0; j--)
+            {
+               
+                System.out.print(" ");
+            }
+            
+            for(j=0; j<=i; j++)
+            {
+                System.out.print("* ");
+            }
+             
+            System.out.println();
+        }
+    }
+ 
+    public static void main(String[] args)
+    {
+        int n = 5;
+        printStars(n);
+    }
+}
+
+Ex5:
+import java.util.Scanner;
+public class Ex5
+{
+public static void main(String[] args)
+{
+Scanner obj=new Scanner(System.in);
+int m1,m2,m3,m4,m5;
+m1=obj.nextInt();
+m2=obj.nextInt();
+m3=obj.nextInt();
+m4=obj.nextInt();
+m5=obj.nextInt();
+int sum=m1+m2+m3+m4+m5;
+int avg=sum/5;
+switch(avg)
+{
+case 10:
+System.out.println("excellent");
+break;
+case 9:
+System.out.println("very good");
+break;
+case 8:
+System.out.println("very good");
+break;
+case 7:
+System.out.println("good");
+break;
+case 6:
+System.out.println("good");
+break;
+case 5:
+System.out.println("poor");
+break;
+case 4:
+System.out.println("poor");
+break;
+case 3:
+System.out.println("poor");
+break;
+case 2:
+System.out.println("very poor");
+break;
+case 1:
+System.out.println("very poor");
+break;
+default:
+System.out.println("invalid");
+break;
+}
+}
+}
