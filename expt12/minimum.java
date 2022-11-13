@@ -25,13 +25,16 @@ class mini
     <t extends Comparable <t>> void m(t[] y){
         t m;
         m=y[0];
-        for(int i=1;i<y.length;i++)
-         {
-           if(m.compareTo(y[i])<0)
-          {
-             m=y[i];
-          }
-         }
-     System.out.println("The maximum number in the array "+ m);
+        for(int i=0;i<y.length;i++)
+        {
+            for(int j=0;j<y.length;j++)
+            {
+                if(y[i].compareTo(y[j])>0)
+                {
+                    m=y[j];
+                }
+            }
+        }
+        System.out.println("The minimum number in the list is :"+ m);
     }
-  }
+}
